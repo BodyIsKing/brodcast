@@ -171,29 +171,14 @@ client.on('ready', () => {
   
   });
 
-var prefix = "-";// لتغير البريفكس من هنا
-//Narox
-client.on('message', message => {//Narox
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;//Narox
-//Narox
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-//Narox
-  let args = message.content.split(" ").slice(1);
-  
- // الشرح : تحط الكلام بعد البريفكس ، و بيكتبه لك في مربع " ايمبد " بس
-
-if (command == "embed") {
-    let say = new Discord.RichEmbed()//Narox
-    .setDescription(args.join("  "))//Narox
-    .setColor('RANDOM')
-    message.channel.sendEmbed(say);//Narox
-    message.delete();
-  }
-
-
-});
+client.on("message", (message) => {
+    if(message.content.startsWith(prefix+"gmail")) {
+        message.channel.send(JSON.stringify({
+            email: Math.random().toString(36).slice(4).trim()+"@gmail.com",
+            password: Math.random().toString(36).slice(4).trim()
+        }))
+    }
+})
 
 
 
