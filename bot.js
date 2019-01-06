@@ -27,17 +27,21 @@ client.on('ready', () => {
   console.log('')
 });
 
+var prefix = "$";
 client.on("message", message => {
-         var prefix = "-";
-            if (message.content.startsWith(prefix + "bc")) {  ///الامر
+
+            if (message.content.startsWith(prefix + "bc")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
-  message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
+  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
  m.send(`${argresult}\n ${m}`);
 })
- message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'all').size}\` **: عدد الاعضاء المستلمين**`); 
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : ??? ??????? ?????????`); 
  message.delete(); 
+};     
+});
+
 
 
 
