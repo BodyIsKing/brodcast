@@ -197,7 +197,7 @@ if (command == "embed") {
 
 });
 
-const adminprefix = "+ ";
+const adminprefix = "+";
 const developers = ['446446238452416538'];
 
 console.log("Randy ");
