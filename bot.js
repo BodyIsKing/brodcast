@@ -3,7 +3,7 @@ const client = new Discord.Client();
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-   client.user.setActivity("Yaciiiin|Music",{type: 'WATCHING'})
+   client.user.setActivity("PoliteShop || Brodcast",{type: 'WATCHING'})
   console.log('')
   console.log('')
   console.log('+[-----------------------------------------------------------------]+')
@@ -27,14 +27,14 @@ client.on('ready', () => {
   console.log('')
 });
 
-var prefix = "b!"
+var prefix = "#"
 
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("b!obc")) {
+    if (message.content.startsWith("#obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -50,7 +50,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "b!";
+  var prefix = "#";
 
   client.on("message", message => {
   
@@ -73,7 +73,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("b!avatar")) {
+if (message.content.startsWith("#avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -93,8 +93,8 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('b!adminbc')){
-if(!message.author.id === '476185102922285066') return;
+if (message.content.startsWith('#adminbc')){
+if(!message.author.id === '546264787026444289') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
@@ -106,7 +106,7 @@ m.sendMessage(args)
 
   
   client.on('message', msg => {
-    if(msg.content === 'b!help')
+    if(msg.content === '#help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -120,13 +120,13 @@ m.sendMessage(args)
   
   
   client.on("message", message => {
-    if (message.content === "b!help") {
+    if (message.content === "#help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-       b!obc | لأرسال برود كاست للكل
-       b!bc  |  لأرسال برود كاست للأونلاين
+       #obc | لأرسال برود كاست للكل
+       #bc  |  لأرسال برود كاست للأونلاين
 ** `)
    message.author.sendEmbed(embed)
    
@@ -143,7 +143,7 @@ m.sendMessage(args)
 
 
    client.on('message', message => {
-    if (message.content.startsWith("b!bot")) {
+    if (message.content.startsWith("#bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -165,7 +165,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("b!help",{type: 'WATCHING'});
+          client.user.setActivity("PoliteBrodcast || ByRD.",{type: 'WATCHING'});
   
   });
 
@@ -197,8 +197,8 @@ if (command == "embed") {
 
 });
 
-const adminprefix = "+";
-const developers = ['446446238452416538'];
+const adminprefix = "#";
+const developers = ['546264787026444289'];
 
 console.log("Randy ");
 
