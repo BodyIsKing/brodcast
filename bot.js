@@ -3,7 +3,7 @@ const client = new Discord.Client();
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-   client.user.setActivity("PoliteShop || Brodcast",{type: 'WATCHING'})
+   client.user.setActivity("PoliteServer || Brodcast",{type: 'WATCHING'})
   console.log('')
   console.log('')
   console.log('+[-----------------------------------------------------------------]+')
@@ -165,7 +165,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("PoliteBrodcast || ByRD.",{type: 'WATCHING'});
+          client.user.setActivity("PoliteBrodcast  ",{type: 'WATCHING'});
   
   });
 
