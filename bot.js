@@ -27,14 +27,14 @@ client.on('ready', () => {
   console.log('')
 });
 
-var prefix = "#"
+var prefix = "_"
 
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("#obc")) {
+    if (message.content.startsWith("_obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -50,7 +50,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "#";
+  var prefix = "_";
 
   client.on("message", message => {
   
@@ -73,7 +73,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("#avatar")) {
+if (message.content.startsWith("_avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -93,7 +93,7 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('#adminbc')){
+if (message.content.startsWith('_adminbc')){
 if(!message.author.id === '546264787026444289') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -106,7 +106,7 @@ m.sendMessage(args)
 
   
   client.on('message', msg => {
-    if(msg.content === '#help')
+    if(msg.content === '_help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -120,13 +120,13 @@ m.sendMessage(args)
   
   
   client.on("message", message => {
-    if (message.content === "#help") {
+    if (message.content === "_help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-       #obc | لأرسال برود كاست للكل
-       #bc  |  لأرسال برود كاست للأونلاين
+       _obc | لأرسال برود كاست للكل
+       _bc  |  لأرسال برود كاست للأونلاين
 ** `)
    message.author.sendEmbed(embed)
    
@@ -143,7 +143,7 @@ m.sendMessage(args)
 
 
    client.on('message', message => {
-    if (message.content.startsWith("#bot")) {
+    if (message.content.startsWith("_bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
